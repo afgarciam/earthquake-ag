@@ -1,0 +1,26 @@
+<div class="row">
+
+  <div class="col s12 m7">
+    <div class="card">
+        <agm-map [latitude]="quakeDetail.latitude" [longitude]="quakeDetail.longitude">
+            <agm-marker [latitude]="quakeDetail.latitude" [longitude]="quakeDetail.longitude"></agm-marker>
+          </agm-map>
+
+        <span class="card-title">{{quakeDetail.title}}</span>
+
+      <div class="card-content">
+        <ul>
+          <li>Place : {{quakeDetail.place}} </li>
+          <li>Time : {{quakeDetail.time}}</li>
+          <li>Magnitude : {{quakeDetail.magnitude}}</li>
+          <li>Latitude : {{quakeDetail.latitude}}</li>
+          <li>Longitde : {{quakeDetail.longitude}}</li>
+          <li>Info: <a href="{{quakeDetail.url}}" target="_blank">earthquake.usgs.gov</a></li>
+        </ul>
+         </div>
+        <div class="card-action">
+          <a routerLink="/">OK</a>
+        </div>
+      </div>
+    </div>
+  </div>
